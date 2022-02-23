@@ -168,6 +168,19 @@ h2 {
     padding-bottom: 30px;
 }
 
+li{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+#sponsor{
+    color: white;
+    width: 90px;
+}
+
 .msg p{
     color: #d9c2a3;
     font-size: .8em;
