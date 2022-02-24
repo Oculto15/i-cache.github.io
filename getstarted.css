@@ -57,7 +57,7 @@ main section{
 
 body {
     background-color: #27211e; 
-    font-size: 15px;
+    font-size: 1em;
     margin: 0;
     padding: 0;
 }
@@ -82,6 +82,22 @@ nav {
     background-color: white;
     display: flex;
     padding-left: 54px;
+}
+
+.quote {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    padding: 30px;
+}
+
+#quote-box {
+    width: 75%;
+    margin: 50px auto;
+    padding: 30px;
+    border: 2px solid #d9c2a3;
+    background-color:rgba(20,30,13, .7);
+    box-shadow: 5px 5px white;
 }
 
 .book{
@@ -121,11 +137,11 @@ nav {
     grid-row: 4/10;
 }
 
-.msg{
+.clue {
     background-color: rgba(20,30,13, .7);; 
     padding-top: 10px;
-    grid-column: 6/10;
-    grid-row: 6/7;
+    grid-column: -4/-2;
+    grid-row: 4/5;
     box-shadow: 5px 5px 10px #6f7364;
 }
 
@@ -133,7 +149,6 @@ footer{
     background-color: rgba(20,30,13, .7);
     padding: 25px 50px;
     padding-top: 15px;
-    margin-top: 200px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -177,8 +192,11 @@ p{
 }
 
 #sponsor{
+    display: block;
+    margin: 2em auto;
     color: white;
     width: 90px;
+    text-align: center;
 }
 
 .msg p{
@@ -225,56 +243,13 @@ footer a:hover{
     padding-top: 15px;
 }  
 
-.rivers-card{
-    margin: 200px 0;
-} 
-
-.camping-card {
-    margin: 200px 0;
-}
-
-.rapids-card {
-    margin: 200px 0;
-}  
-
-.card-img {
-  
-    transition: transform .5s;
-}
-
-.card-img:hover {
-    opacity: .6;
-    transform: scale(1.1);
-}
 .mountains{
-    grid-column: 2/9;
+    grid-column: 2/6;
+    grid-row: 3/6;
 }
 
 #gmap_canvas{
     grid-column: 2/9;
-}
-.card-img, .mountains {
-    width: 100%;
-    grid-column: 2/7;
-    grid-row: 5/8;
-}
-
-.card-img, .rivers-card {
-    width: 100%;
-    grid-column: 2/4;
-    grid-row: 2/3;
-}
-
-.card-img, .camping-card {
-    width: 100%;
-    grid-column: 5/7;
-    grid-row: 2/3;
-}
-
-.card-img, .rapids-card {
-    width: 100%;
-    grid-column: 8/10;
-    grid-row: 2/3;
 }
 
 main section img {
@@ -283,12 +258,26 @@ main section img {
 
 .home-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto 2em repeat(5, auto);
 }
 
+.reflection-card, .activity-card {
+    border: 2px solid #d9c2a3;
+    background-color:rgba(20,30,13, .7);
+    box-shadow: 5px 5px white;
+    font-size: 1.5em;
+}
 
+.reflection-card {
+    grid-column: 2/4;
+}
 
-
+.activity-card {
+    grid-column: 5/7;
+    text-align: left;
+    padding-left: 0.5em;
+}
 
 
 
@@ -327,8 +316,7 @@ main section img {
     #background {
         display: none;
     }
-    .mountains, .msg {
-        width: 80%;
+    .mountains, .clue {
         display: block;
         margin: 0 auto;
     }
